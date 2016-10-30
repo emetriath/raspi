@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="tank/css/tank.css"/>
+    <title>パンツァー・フォー</title>
+    <!-- WebIOPi -->
+    <script src="tank/js/require.js"></script>
+    <script>
+        require(["/webiopi.js", "tank/js/tank.js"], function(){
+            webiopi().ready( initialize_webiopi );
+        });
+    </script>
+  </head>
+  <body>
+    <div align="center">
+    <div id="box">
+    <div id="stick">
+    <table>
+      <tr>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(5,100)" id="pivLeft" />
+        </td>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(1,100)" id="forword"/>
+        </td>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(6,100)" id="pivRight" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(2,100)" id="left" />
+        </td>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(0,100)" id="stop" />
+        </td>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(3,100)" id="right" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <button class="ctrlbtn" onmousedown="javascript:setWheel(4,100)" id="back" />
+        </td>
+        <td></td>
+      </tr>
+    </table>
+    </div>
+    <div id="control">
+    <table>
+      <tr>
+        <td><!--
+          <input type="checkbox" id="ch0" onchange="javascript:setTurret(this.checked?'1':'0')" />
+          <label for="ch0">
+            <div class="ctrlbtn" id="turretL" />
+          </label>-->
+        </td>
+        <td><button class="ctrlbtn" id="trcannon_up" onmousedown="javascript:setTurret(0)" /></td>
+        <td><!--
+          <input type="checkbox" id="ch1" onchange="javascript:setTurret(this.checked?'2':'0')" />
+          <label for="ch1">
+            <div class="ctrlbtn" id="turretR" />
+          </label>-->
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="ctrlbtn" id="turretL" ontouchstart="javascript:setTurret(1)" ontouchend="javascript:setTurret(0)" />
+        </td>
+        <td>
+          <button class="ctrlbtn" id="trstop" onmousedown="javascript:setTurret(0)" />
+        </td>
+        <td>
+          <button class="ctrlbtn" id="turretR" ontouchstart="javascript:setTurret(2)" ontouchend="javascript:setTurret(0)" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button class="ctrlbtn" id="trcannon_down" onmousedown="javascript:setTurret(0)" /></td>
+        <td></td>
+      </tr>
+    </table>
+    </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <div>
+    <button id="fire" class="ctrlbtn" onclick="javascript:gunfire(1)" />
+    </div>
+    </div>
+  </body>
+</html>

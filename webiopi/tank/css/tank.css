@@ -1,0 +1,73 @@
+.ctrlbtn{
+    min-width: 60px;
+    min-height: 60px;
+}
+
+#box {
+    width: 100%;
+}
+#stick {
+    float: left;
+    width: 50%;
+}
+#control {
+    float: right;
+    width: 50%;
+}
+
+#ch0,#ch1{
+    display: none;
+}
+
+#forword {
+    background: url("../img/arrow_up.png") no-repeat center;
+}
+
+#back {
+    background: url("../img/arrow_down.png") no-repeat center;
+}
+
+#left {
+    background: url("../img/arrow_left.png") no-repeat center;
+}
+
+#right {
+    background: url("../img/arrow_right.png") no-repeat center;
+}
+
+#pivRight {
+    background: url("../img/pivotR.png") no-repeat center;
+}
+
+#pivLeft {
+    background: url("../img/pivotL.png") no-repeat center;
+}
+
+#stop {
+    background: url("../img/stop.png") no-repeat center;
+}
+
+
+#trstop {
+    background: url("../img/stop.png") no-repeat center;
+}
+
+#trcannon_up {
+    background: url("../img/cannon_up.png") no-repeat center;
+}
+
+#trcannon_down {
+    background: url("../img/cannon_down.png") no-repeat center;
+}
+
+#turretL , #lbch0 {
+    background: url("../img/turretL.png") no-repeat center;
+}
+
+#turretR , #lbch1 {
+    background: url("../img/turretR.png") no-repeat center;
+}
+
+#fire {
+    background: url("../img/fire.png") no-repeat center;
+}
