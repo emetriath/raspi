@@ -9,11 +9,13 @@ from parts.track import Track
 from parts.turret import Turret
 from parts.cannon import Cannon
 from parts.fire import Fire
+from parts.camera import Camera
 
 
 webiopi.setDebug()
 webiopi.debug(sys.path)
 
+camera = None
 track = Track()
 turret = Turret()
 cannon = Cannon()
@@ -98,3 +100,14 @@ def setTurret(angle):
 def gunfire(num):
     global fire
     fire.fire(int(num))
+    
+@webiopi.macro
+def startCamera():
+    webiopi.debug("Script with macros - startCamera ")
+    global camera
+    camera = Camera()
+
+@webiopi.macro
+def geCamImage():
+    global camera
+    return camera.getImage()
