@@ -1,6 +1,14 @@
 .ctrlbtn{
-    min-width: 60px;
-    min-height: 60px;
+	min-width: 60px;
+	min-height: 60px;
+}
+
+
+#capture img {
+	width: 100%;
+	min-width: 400px;
+	min-height: 300px;
+	margin: 0 0 20px 0;
 }
 
 #box {
@@ -70,4 +78,8 @@
 
 #fire {
     background: url("../img/fire.png") no-repeat center;
+}
+
+#rec {
+	background: url("../img/rec.png") no-repeat center;
 }
