@@ -8,6 +8,14 @@ GPIO.setmode(GPIO.BCM)
 pinA = 23
 pinB = 22
 
+#check
+print("#### CHECK ####")
+print("Connect raspi 5v")
+print("Connect raspi GPIO:"+ str(pinA) + " to IN A")
+print("Connect raspi GPIO:"+ str(pinB) + " to IN B")
+print("Connect Pin8 Vs2 B High for work")
+print("###############")
+
 # IN_A
 GPIO.setup(pinA, GPIO.OUT)
 # IN_B
